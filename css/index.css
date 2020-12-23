@@ -129,9 +129,14 @@ p {
 	padding     : .18rem 0 .14rem 0;
 }
 
+@media screen and (min-width: 750px) {
+	.activity .body .item .sub {
+		transform                : scale(0.7);
+	}
+}
 .activity .body .item .sub {
 	font-size                : .25rem;
-	transform                : scale(0.7);
+	/*transform                : scale(0.7);*/
 	white-space              : nowrap;
 	-webkit-transform-origin : center;
 }
