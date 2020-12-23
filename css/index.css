@@ -1,0 +1,229 @@
+p {
+	margin : 0;
+}
+
+.btn {
+	border-radius    : 42px;
+	background-image : -moz-linear-gradient(-84deg, rgb(255, 171, 50) 0%, rgb(251, 140, 45) 56%, rgb(246, 108, 40) 99%);
+	background-image : -webkit-linear-gradient(-84deg, rgb(255, 171, 50) 0%, rgb(251, 140, 45) 56%, rgb(246, 108, 40) 99%);
+	background-image : -ms-linear-gradient(-84deg, rgb(255, 171, 50) 0%, rgb(251, 140, 45) 56%, rgb(246, 108, 40) 99%);
+	box-shadow       : 0px 8px 10px 0px rgba(212, 56, 36, 0.28);
+	height           : .84rem;
+	line-height      : .84rem;
+	width            : 3.88rem;
+	font-size        : .42rem;
+	color            : #fff;
+	text-align       : center;
+	text-shadow      : 0px 1px 7px rgba(164, 80, 5, 0.85);
+}
+
+.container {
+	background-color : #fbfbfb;
+}
+
+.container img {
+	display : block;
+}
+
+.contact {
+	width    : 1.2rem;
+	position : fixed;
+	right    : .8rem;
+	top      : 11.8rem;
+	z-index  : 2;
+}
+
+.logo {
+	display         : flex;
+	align-items     : center;
+	justify-content : space-between;
+}
+
+.logo img {
+	width : 3rem;
+}
+
+.logo a {
+	font-size       : .48rem;
+	color           : #b51e17;
+	font-weight     : 600;
+	text-decoration : none;
+	padding-right   : .2rem;
+}
+
+.lottery {
+	position : relative;
+}
+
+.lottery .body {
+	position  : absolute;
+	left      : 50%;
+	transform : translateX(-50%);
+	top       : 1.5rem;
+}
+
+.lottery .body > div img {
+	width : 9.16rem;
+}
+
+.lottery .body img.zhizhen {
+	position  : absolute;
+	left      : 50%;
+	top       : 50%;
+	transform : translate(-50%, -50%);
+	width     : 1.98rem;
+}
+
+.lottery .history {
+	width       : 100%;
+	height      : 4rem;
+	position    : absolute;
+	left        : 50%;
+	transform   : translateX(-50%);
+	bottom      : 1.18rem;
+	color       : #fd6013;
+	font-size   : .37rem;
+	line-height : .7rem;
+	text-align  : center;
+	overflow    : hidden;
+}
+
+.activity {
+	overflow         : hidden;
+	background-color : #f66c28;
+}
+
+.activity .title img {
+	width  : 2.76rem;
+	margin : auto;
+}
+
+.activity .body {
+	display         : flex;
+	flex-wrap       : wrap;
+	justify-content : center;
+	color           : #fff;
+}
+
+.activity .body .item {
+	display        : flex;
+	flex-direction : column;
+	align-items    : center;
+	width          : 4.52rem;
+	/*text-align: center;*/
+	margin-left    : .2rem;
+	margin-top     : .56rem;
+	overflow       : hidden;
+}
+
+.activity .body .item img {
+	width : 4.52rem;
+}
+
+.activity .body .item .title {
+	font-weight : 600;
+	font-size   : .35rem;
+	padding     : .18rem 0 .14rem 0;
+}
+
+.activity .body .item .sub {
+	font-size                : .25rem;
+	transform                : scale(0.7);
+	white-space              : nowrap;
+	-webkit-transform-origin : center;
+}
+
+.activity .btn {
+	margin : .58rem auto 0.9rem auto;
+}
+
+.intro {
+	overflow : hidden;
+}
+
+.intro .title {
+	padding : .65rem 0 .53rem 0;
+}
+
+.intro .title img {
+	width  : 2.63rem;
+	margin : auto;
+}
+
+.intro .info img {
+	width  : 9.65rem;
+	margin : auto;
+}
+
+.intro .btn:nth-last-child(2) {
+	margin : 1.16rem auto 0 auto;
+}
+
+.intro .btn:nth-last-child(1) {
+	margin : .6rem auto .6rem auto;
+}
+
+.photo {
+	background-color : #f66c28;
+	overflow         : hidden;
+}
+
+.photo .title {
+	padding          : .52rem 0;
+	background-color : #fbfbfb;
+}
+
+.photo .title img {
+	width  : 2.66rem;
+	margin : auto;
+}
+
+.photo .btn {
+	width  : 5.26rem;
+	margin : .52rem auto .2rem auto;
+}
+
+.live {
+	overflow         : hidden;
+	background-color : #f66c28;
+}
+
+.live .title {
+	padding : .6rem 0;
+}
+
+.live .title img {
+	width  : 2.7rem;
+	margin : auto;
+}
+
+.live .video {
+	width    : 9.65rem;
+	margin   : auto;
+	position : relative;
+}
+
+.live .btn {
+	margin : .55rem auto .47rem auto;
+}
+
+.peitao {
+	overflow: hidden;
+}
+
+.peitao .title {
+	padding : .64rem 0;
+}
+
+.peitao .title img {
+	width  : 2.76rem;
+	margin : auto;
+}
+.peitao .info{
+	width : 9.65rem;
+	margin: auto;
+}
+.peitao .btn{
+	margin:.5rem auto;
+}
+

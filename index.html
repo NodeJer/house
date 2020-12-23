@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>鼎龙湾</title>
+  <link crossorigin="anonymous" integrity="sha384-qPBrxW93Q6pt1TAjWLNmOIU3NvzWiWI5qU4ajHPPyNxZBYQk582m0HMPnXwkIMJO" href="https://lib.baomitu.com/normalize/4.2.0/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/layer.css">
+  <style>
+    /*重置layer弹出框样式--*/
+    .layui-m-layercont {
+      padding : 0 0 30px 0;
+    }
+    
+    .layui-m-layerbtn {
+      background-color : #00328C;
+    }
+    
+    .layui-m-layerbtn span[yes] {
+      color : #fff;
+    }
+    .layui-m-layerbtn span:active{
+      background-color : #00328C;
+    }
+  </style>
+  <script src="js/rem.js"></script>
+</head>
+<body>
+<div class="container">
+  <a href="tel:4006661382,8043#">
+    <img class="contact" src="image/contact.png"/>
+  </a>
+  <div class="logo">
+    <img src="https://static.yjsh666.cn/M00/componentImg/2020/04/25/b78781f13a28afe0b940daf3f2634581.png" alt="">
+    <a href="tel:4006661382,8043#">4006661382转8043</a>
+  </div>
+  <div class="swiper-container" id="homeBanner">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img width="100%" src="test/banner-1.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img width="100%" src="test/banner-1.jpg" alt="">
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div id="homeBannerPagination" class="swiper-pagination"></div>
+  </div>
+  <div class="lottery">
+    <img width="100%" src="image/choujiang-bg.jpg" alt="">
+    <div class="body">
+      <div style="transform: rotate(0deg);" id="lotteryPan"><img src="image/pan.png" alt=""></div>
+      <img class="zhizhen" onclick="goLottery()" src="image/zhizhen.png" alt="">
+    </div>
+    <div class="history">
+      <div>
+      </div>
+    </div>
+  </div>
+  <div class="activity">
+    <div class="title">
+      <img src="image/huodong.png" alt="">
+    </div>
+    <div class="body">
+      <div class="item">
+        <img src=test/hd1.png alt="">
+        <p class="title">免费专车接送</p>
+        <p class="sub">机场、高铁、项目周边免费专车接送</p>
+      </div>
+      <div class="item">
+        <img src=test/hd1.png alt="">
+        <p class="title">两年物业管理费</p>
+        <p class="sub">无忧托管为您保驾护航</p>
+      </div>
+      <div class="item">
+        <img src=test/hd1.png alt="">
+        <p class="title">500元加油卡</p>
+        <p class="sub">可用于抵扣自驾看房交通费</p>
+      </div>
+      <div class="item">
+        <img src=test/hd1.png alt="">
+        <p class="title">3000元通用券</p>
+        <p class="sub">可抵扣房款或回来机票、高铁票</p>
+      </div>
+    </div>
+    <div onclick="goWelfare()" class="btn">领取购房活动福利</div>
+  </div>
+  <div class="intro">
+    <div class="title">
+      <img src="test/intro.png" alt="">
+    </div>
+    <div class="info">
+      <img src="test/intro-info.jpg" alt="">
+    </div>
+    <div class="btn" onclick="goPaperBook()">免费领纸质楼书</div>
+    <div class="btn" onclick="goElectronBook()">免费领电子楼书</div>
+  </div>
+  <div class="photo">
+    <div class="title">
+      <img src="test/photo.png" alt="">
+    </div>
+    <div class="swiper-container" id="gallery">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img width="100%" src="https://static.yjsh666.cn/M00/componentImg/2020/06/06/8b07185e8391265d7f178a29dd419a00.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img width="100%" src="https://static.yjsh666.cn/M00/componentImg/2020/06/06/8b07185e8391265d7f178a29dd419a00.jpg" alt="">
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div id="galleryPagination" class="swiper-pagination"></div>
+    </div>
+    <div onclick="goAnalysis()" class="btn">获取项目精准置业分析</div>
+  </div>
+  <div class="live">
+    <div class="title">
+      <img src="test/live-title.png" alt="">
+    </div>
+    <div class="video">
+      <video controls width="100%" poster="https://static.yjsh666.cn/M00/componentImg/2020/04/23/5aacd008436178dfb1cb4d8aa6e1f1b4.jpg" src="https://static.yjsh666.cn/M00/componentVideo/2020/06/06/e3704fe090494d527e1f16786cd5ea6f.mp4"></video>
+    </div>
+    <div onclick="goLiveHouse()" class="btn">申请远程视频看房</div>
+  </div>
+  <div class="peitao">
+    <div class="title">
+      <img src="test/peitao-title.png" alt="">
+    </div>
+    <img class="info" src="test/peitao.jpg" alt="">
+    <div onclick="goBaoJia()" class="btn">获取楼盘及报价</div>
+  </div>
+</div>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.rotate.js"></script>
+<script src="js/layer.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
