@@ -18,7 +18,10 @@ p {
 }
 
 .container {
+	max-width        : 750px;
+	margin           : auto;
 	background-color : #fbfbfb;
+	overflow-x       : hidden;
 }
 
 .container img {
@@ -208,7 +211,7 @@ p {
 }
 
 .peitao {
-	overflow: hidden;
+	overflow : hidden;
 }
 
 .peitao .title {
@@ -219,11 +222,13 @@ p {
 	width  : 2.76rem;
 	margin : auto;
 }
-.peitao .info{
-	width : 9.65rem;
-	margin: auto;
+
+.peitao .info {
+	width  : 9.65rem;
+	margin : auto;
 }
-.peitao .btn{
-	margin:.5rem auto;
+
+.peitao .btn {
+	margin : .5rem auto;
 }
 
