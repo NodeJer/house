@@ -141,7 +141,7 @@ function goBaoJia() {
 }
 
 /**
- *
+ * 手机号录入弹出层
  * @param title 弹出框标题
  * @param btnText 弹出框按钮文本
  * @param callback 弹出框回掉方法(正确填写手机号码后触发)
