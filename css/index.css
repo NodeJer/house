@@ -45,6 +45,7 @@ p {
 }
 
 .container {
+	padding-top : 1.5rem;
 	max-width        : 750px;
 	margin           : auto;
 	background-color : #fbfbfb;
@@ -70,21 +71,37 @@ p {
 }
 
 .logo {
+	position : fixed;
+	top : 0;
+	left : 0;
+	width : 100%;
 	display         : flex;
 	align-items     : center;
 	justify-content : space-between;
+	height : 1.5rem;
+	background-color: #fff;
+	box-shadow: 2px 0 5px #bcbcbc;
+	z-index: 10;
 }
 
 .logo img {
 	width : 3rem;
 }
 
-.logo a {
+.logo .phone {
 	font-size       : .48rem;
 	color           : #b51e17;
 	font-weight     : 600;
 	text-decoration : none;
 	padding-right   : .2rem;
+}
+
+.logo .yuyue {
+	padding       : .2rem;
+	font-size     : .24rem;
+	border        : 1px solid #ccc;
+	border-radius : .1rem;
+	margin-right  : .2rem;
 }
 
 .lottery {
@@ -373,7 +390,8 @@ p {
 }
 
 .online-room form {
-	display : inline-block;
+	width  : fit-content;
+	margin : auto;
 }
 
 .online-room .item {
@@ -402,6 +420,9 @@ p {
 	font-size    : .3rem;
 	padding      : 0 .4rem;
 	border-right : 1px solid #5a5a5a;
+}
+.online-room .item label:last-child{
+	padding-right : 0;
 }
 
 .online-room .item input {
@@ -680,7 +701,7 @@ p {
 	flex            : 1;
 	display         : flex;
 	justify-content : flex-end;
-	align-items: center;
+	align-items     : center;
 }
 
 .answers .up {
@@ -906,13 +927,13 @@ p {
 }
 
 .nav {
-	position : fixed;
-	left     : 50%;
-	bottom   : 0;
-	width    : 100%;
-	max-width: 750px;
-	transform: translateX(-50%);
-	z-index  : 10;
+	position  : fixed;
+	left      : 50%;
+	bottom    : 0;
+	width     : 100%;
+	max-width : 750px;
+	transform : translateX(-50%);
+	z-index   : 10;
 }
 
 .nav .yuyue {
