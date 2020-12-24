@@ -303,6 +303,13 @@ function goZhenshu() {
     alert('调用查看楼盘证书接口');
   });
 }
+//项目位置
+function goLocation() {
+  openLayer('获取项目地址', '立即获取', function (phone) {
+    //todo 调用项目位置接口
+    alert('调用项目位置接口');
+  });
+}
 /**
  * 手机号录入弹出层
  * @param title 弹出框标题

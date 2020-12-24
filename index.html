@@ -67,7 +67,7 @@
     </div>
   </div>
   <!--  购房活动-->
-  <div class="activity">
+  <div id="activity" class="activity">
     <div class="title">
       <img src="image/huodong.png" alt="">
     </div>
@@ -200,7 +200,7 @@
   
   </div>
   <!--  在线看房-->
-  <div class="online-room">
+  <div id="online-room" class="online-room">
     <div class="title">
       <img src="test/online-room.png" alt="">
     </div>
@@ -269,7 +269,7 @@
     </form>
   </div>
   <!--  特价房源-->
-  <div class="tejia-house">
+  <div id="tejia-house" class="tejia-house">
     <div class="swiper-container" id="tejia">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -285,7 +285,7 @@
     <div class="btn" onclick="goTejia()">查看特价户型房源</div>
   </div>
   <!--  房源查询-->
-  <div class="transactionInquiry">
+  <div id="transactionInquiry" class="transactionInquiry">
     <div class="title">
       <img src="test/house-query-title.png" alt="">
     </div>
@@ -305,7 +305,7 @@
     </div>
   </div>
   <!--  在线算价-->
-  <div class="online-compute">
+  <div id="online-compute" class="online-compute">
     <div class="title">
       <img src="test/online-compute.png" alt="">
     </div>
@@ -515,9 +515,9 @@
         <div class="btn" onclick="goDescribe()">一键订阅</div>
       </div>
     </div>
-    
+  
   </div>
-<!--  业主论坛-->
+  <!--  业主论坛-->
   <div class="forum">
     <div class="title">
       <img src="test/forum.png" alt="">
@@ -565,7 +565,7 @@
       </div>
     </div>
   </div>
-<!--  业主微信群-->
+  <!--  业主微信群-->
   <div class="wechat">
     <div class="title">
       <img src="image/wechat.png" alt="">
@@ -586,12 +586,38 @@
   </div>
   
   <!--楼盘证书-->
-  <div class="zhenshu">
+  <div id="zhenshu" class="zhenshu">
     <div class="title">
       <img src="test/zhenshu.png" alt="">
     </div>
     <img width="100%" src="https://hd.zdb.im/theme/one/image/wuzheng.png?t=20200701" alt="">
     <div class="btn" onclick="goZhenshu()">查看楼盘证书</div>
+  </div>
+  <!--  项目位置-->
+  <div class="location">
+    <div class="title">
+      <img src="test/location.png" alt="">
+    </div>
+    <img onclick="goLocation()" width="100%" src="https://static.yjsh666.cn/M00/componentImg/2020/06/23/736859e6c3be40ba7c8ebcad8a01d73f.jpg" alt="">
+  </div>
+  <footer>
+    <img src="https://static.yjsh666.cn/M00/componentImg/2020/04/25/b78781f13a28afe0b940daf3f2634581.png" alt="">
+    <p>开发商：吴川市鼎龙置业有限公司</p>
+    <p>预售证号：湛房预许第0520180011号</p>
+    <p>©珠海线上展厅网络技术有限公司</p>
+    <p>联系电话：4006661382转8043</p>
+  </footer>
+  <div class="nav">
+    <img width="100%" src="image/footer.png" alt="">
+    <a href="#book"><img src="image/yykf.png" class="yuyue" /></a>
+    <div class="btns">
+      <a href="#online-room">在线选房</a>
+      <a href="#tejia-house">特价房源</a>
+      <a href="#activity">购房活动</a>
+      <a href="#online-compute">在线算价</a>
+      <a href="#transactionInquiry">房源查询</a>
+      <a href="#zhenshu">楼盘证书</a>
+    </div>
   </div>
 </div>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.0.0/jquery.js"></script>
