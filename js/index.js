@@ -394,11 +394,11 @@ function scroll(node, lineHeight) {
   }
   
   var lineHeight = lineHeight || parseInt(window.getComputedStyle(node, null).lineHeight);
-  var tid        = null;
+  // var tid        = null;
   var stop       = true;
   
   function step(timestamp) {
-    tid = requestAnimationFrame(step);
+    var tid = requestAnimationFrame(step);
     if (node.scrollHeight <= node.clientHeight) {
       return false;
     }
