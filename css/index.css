@@ -367,6 +367,7 @@ p {
 }
 .tejia-house{
 	overflow: hidden;
+	background-color: #fff;
 }
 .tejia-house .btn{
 	margin: .7rem auto 1rem auto;
