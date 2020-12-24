@@ -321,6 +321,9 @@ function openLayer(title, btnText, callback) {
     title  : title,
     content: '<form><input autofocus name="layerPhone" style="line-height: 1rem; width: 70%" type="tel" placeholder="请输入手机号码" /></form>',
     btn    : btnText,
+    success: function(){
+      $('input[name=layerPhone]')[0].focus();
+    },
     yes    : function (index) {
       var phone = $('input[name=layerPhone]').val();
       if (!phoneReg.test(phone)) {
