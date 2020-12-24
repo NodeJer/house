@@ -95,7 +95,7 @@ $.get('https://hd.zdb.im/v2/view/randUserList', function (response) {
 });
 
 //业主论坛滚动
-scroll($('#forumBody')[0], $('#forumBody .item')[0].offsetHeight+1);
+scroll($('#forumBody')[0], $('#forumBody .item')[0].offsetHeight + 1);
 //业主微信群滚动
 scroll($('#wechatBody')[0]);
 
@@ -194,6 +194,7 @@ function goBook() {
     alert('立即预约看房接口' + $form.serialize());
   }
 }
+
 //在线看房
 function goOnlineRoom() {
   var $form = $('#onlineRoom');
@@ -207,6 +208,7 @@ function goOnlineRoom() {
     alert('在线看房接口' + $form.serialize());
   }
 }
+
 //查看特价户型房源
 function goTejia() {
   openLayer('查看特价户型房源', '立即查看', function (phone) {
@@ -214,6 +216,7 @@ function goTejia() {
     alert('调用查看特价户型房源接口');
   });
 }
+
 //获取该房号计价单
 function goOnlineCompute() {
   var $form = $('#onlineCompute');
@@ -222,11 +225,11 @@ function goOnlineCompute() {
     alert('请输入格式正确的手机号码');
     return false;
   }
-  else if($form[0]['block'].value == ''){
+  else if ($form[0]['block'].value == '') {
     alert('请输入栋号');
     return false;
   }
-  else if($form[0]['room'].value == ''){
+  else if ($form[0]['room'].value == '') {
     alert('请输入房号');
     return false;
   }
@@ -243,6 +246,7 @@ function goGuwen() {
     alert('调用置业顾问咨询接口');
   });
 }
+
 //百问百答
 function goAsk() {
   var $form = $('#ask');
@@ -251,7 +255,7 @@ function goAsk() {
     alert('请输入格式正确的手机号码');
     return false;
   }
-  else if($form[0]['consult'].value == ''){
+  else if ($form[0]['consult'].value == '') {
     alert('请输入问题');
     return false;
   }
@@ -268,6 +272,7 @@ function goNews() {
     alert('调用查看更多动态接口');
   });
 }
+
 //一键订阅
 function goDescribe() {
   openLayer('订阅项目动态', '立即订阅', function (phone) {
@@ -275,6 +280,7 @@ function goDescribe() {
     alert('调用一键订阅接口');
   });
 }
+
 //业主论坛查看全部
 function goFornumAll() {
   openLayer('查看全部', '立即查看', function (phone) {
@@ -282,13 +288,15 @@ function goFornumAll() {
     alert('调用业主论坛查看全部接口');
   });
 }
+
 //业主论坛评论
 function goFornumComment() {
   openLayerComment('我要评论', '立即评论', function (comment) {
     //todo 调用业主论坛评论接口
-    alert('调用业主论坛评论接口=>'+comment);
+    alert('调用业主论坛评论接口=>' + comment);
   });
 }
+
 //业主微信群
 function goJoin() {
   openLayer('加入业主微信群', '立即加入', function (phone) {
@@ -296,6 +304,7 @@ function goJoin() {
     alert('调用加入业主微信群接口');
   });
 }
+
 //楼盘证书
 function goZhenshu() {
   openLayer('查看项目五证高清图片', '立即查看', function (phone) {
@@ -303,6 +312,7 @@ function goZhenshu() {
     alert('调用查看楼盘证书接口');
   });
 }
+
 //项目位置
 function goLocation() {
   openLayer('获取项目地址', '立即获取', function (phone) {
@@ -310,6 +320,7 @@ function goLocation() {
     alert('调用项目位置接口');
   });
 }
+
 /**
  * 手机号录入弹出层
  * @param title 弹出框标题
@@ -318,13 +329,16 @@ function goLocation() {
  */
 function openLayer(title, btnText, callback) {
   layer.open({
-    title  : title,
-    content: '<form><input autofocus name="layerPhone" style="line-height: 1rem; width: 70%" type="tel" placeholder="请输入手机号码" /></form>',
-    btn    : btnText,
-    success: function(){
+    title   : title,
+    content : '<form><input autofocus name="layerPhone" style="line-height: 1rem; width: 70%" type="tel" placeholder="请输入手机号码" /></form>',
+    btn     : [btnText, '关闭'],
+    success : function () {
       $('input[name=layerPhone]')[0].focus();
     },
-    yes    : function (index) {
+    cancel: function (index){
+      layer.close(index);
+    },
+    yes     : function (index) {
       var phone = $('input[name=layerPhone]').val();
       if (!phoneReg.test(phone)) {
         alert('手机号码格式不正确！');
@@ -337,6 +351,7 @@ function openLayer(title, btnText, callback) {
     }
   });
 }
+
 /**
  * 评论弹出层
  * @param title 弹出框标题
@@ -347,7 +362,10 @@ function openLayerComment(title, btnText, callback) {
   layer.open({
     title  : title,
     content: '<form><textarea id="layerComment" name="layerComment" style="width: 70%; height: 2rem; resize: none" placeholder="请输入评论"></textarea></form>',
-    btn    : btnText,
+    btn    : [btnText, '关闭'],
+    cancel: function (index){
+      layer.close(index);
+    },
     yes    : function (index) {
       var layerComment = $('#layerComment').val();
       if (layerComment == '') {
@@ -368,7 +386,7 @@ function scroll(node, lineHeight) {
     node.appendChild(node.children[0].cloneNode(true));
   }
   
-  var lineHeight = lineHeight||parseInt(window.getComputedStyle(node, null).lineHeight);
+  var lineHeight = lineHeight || parseInt(window.getComputedStyle(node, null).lineHeight);
   var tid        = null;
   var stop       = true;
   
