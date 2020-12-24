@@ -660,7 +660,7 @@ p {
 
 .answers .qa .qt {
 	position    : relative;
-	font-size   : .35rem;
+	font-size   : .4rem;
 	color       : #f66c28;
 	text-indent : .46rem;
 }
@@ -678,7 +678,7 @@ p {
 }
 
 .answers .qa .q {
-	font-size   : .3rem;
+	font-size   : .32rem;
 	color       : #7c7c7c;
 	margin-top  : .3rem;
 	line-height : .48rem;
@@ -728,7 +728,7 @@ p {
 	width         : 100%;
 	height        : 1.42rem;
 	color         : #7c7c7c;
-	font-size     : .3rem;
+	font-size     : .4rem;
 	margin-top    : .4rem;
 	text-indent   : .2rem;
 	resize        : none;
