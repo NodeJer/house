@@ -28,6 +28,7 @@ p {
 	border:1px solid #ccc;
 	border-right: none;
 	background : none;
+	border-radius: unset;
 }
 .search span{
 	flex: 1;
@@ -47,6 +48,10 @@ p {
 
 .container img {
 	display : block;
+}
+.container input[type=radio]{
+	min-width: 12px;
+	min-height: 12px;
 }
 
 .contact {
