@@ -11,7 +11,7 @@ p {
 	height           : .84rem;
 	line-height      : .84rem;
 	width            : 3.88rem;
-	font-size        : .5rem;
+	font-size        : .42rem;
 	color            : #fff;
 	text-align       : center;
 	text-shadow      : 0 1px 7px rgba(164, 80, 5, 0.85);
@@ -24,7 +24,7 @@ p {
 
 .search input {
 	flex          : 3;
-	font-size     : .25rem;
+	font-size     : .3rem;
 	text-indent   : .3rem;
 	color         : #7c7c7c;
 	outline       : none;
