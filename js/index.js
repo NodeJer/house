@@ -319,7 +319,7 @@ function goLocation() {
 function openLayer(title, btnText, callback) {
   layer.open({
     title  : title,
-    content: '<form><input name="layerPhone" style="line-height: 1rem; width: 70%" type="tel" placeholder="请输入手机号码" /></form>',
+    content: '<form><input autofocus name="layerPhone" style="line-height: 1rem; width: 70%" type="tel" placeholder="请输入手机号码" /></form>',
     btn    : btnText,
     yes    : function (index) {
       var phone = $('input[name=layerPhone]').val();
