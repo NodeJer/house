@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/layer.css">
+  <link rel="stylesheet" href="css/LCalendar.css">
   <style>
     /*重置layer弹出框样式--*/
     .layui-m-layercont {
@@ -21,7 +22,8 @@
     .layui-m-layerbtn span[yes] {
       color : #fff;
     }
-    .layui-m-layerbtn span:active{
+    
+    .layui-m-layerbtn span:active {
       background-color : #00328C;
     }
   </style>
@@ -29,6 +31,7 @@
 </head>
 <body>
 <div class="container">
+  <!--  联系我们-->
   <a href="tel:4006661382,8043#">
     <img class="contact" src="image/contact.png"/>
   </a>
@@ -36,6 +39,7 @@
     <img src="https://static.yjsh666.cn/M00/componentImg/2020/04/25/b78781f13a28afe0b940daf3f2634581.png" alt="">
     <a href="tel:4006661382,8043#">4006661382转8043</a>
   </div>
+  <!--  首页轮播-->
   <div class="swiper-container" id="homeBanner">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -48,10 +52,13 @@
     <!-- Add Pagination -->
     <div id="homeBannerPagination" class="swiper-pagination"></div>
   </div>
+  <!--  抽奖-->
   <div class="lottery">
     <img width="100%" src="image/choujiang-bg.jpg" alt="">
     <div class="body">
-      <div style="transform: rotate(0deg);" id="lotteryPan"><img src="image/pan.png" alt=""></div>
+      <div style="transform: rotate(0deg);" id="lotteryPan">
+        <img src="image/pan.png" alt="">
+      </div>
       <img class="zhizhen" onclick="goLottery()" src="image/zhizhen.png" alt="">
     </div>
     <div class="history">
@@ -59,34 +66,36 @@
       </div>
     </div>
   </div>
+  <!--  购房活动-->
   <div class="activity">
     <div class="title">
       <img src="image/huodong.png" alt="">
     </div>
     <div class="body">
       <div class="item">
-        <img src=test/hd1.png alt="">
+        <img src="test/hd1.png" alt="">
         <p class="title">免费专车接送</p>
         <p class="sub">机场、高铁、项目周边免费专车接送</p>
       </div>
       <div class="item">
-        <img src=test/hd1.png alt="">
+        <img src="test/hd1.png" alt="">
         <p class="title">两年物业管理费</p>
         <p class="sub">无忧托管为您保驾护航</p>
       </div>
       <div class="item">
-        <img src=test/hd1.png alt="">
+        <img src="test/hd1.png" alt="">
         <p class="title">500元加油卡</p>
         <p class="sub">可用于抵扣自驾看房交通费</p>
       </div>
       <div class="item">
-        <img src=test/hd1.png alt="">
+        <img src="test/hd1.png" alt="">
         <p class="title">3000元通用券</p>
         <p class="sub">可抵扣房款或回来机票、高铁票</p>
       </div>
     </div>
     <div onclick="goWelfare()" class="btn">领取购房活动福利</div>
   </div>
+  <!--  项目介绍-->
   <div class="intro">
     <div class="title">
       <img src="test/intro.png" alt="">
@@ -97,6 +106,7 @@
     <div class="btn" onclick="goPaperBook()">免费领纸质楼书</div>
     <div class="btn" onclick="goElectronBook()">免费领电子楼书</div>
   </div>
+  <!--  项目图库-->
   <div class="photo">
     <div class="title">
       <img src="test/photo.png" alt="">
@@ -115,6 +125,7 @@
     </div>
     <div onclick="goAnalysis()" class="btn">获取项目精准置业分析</div>
   </div>
+  <!--  直播看房-->
   <div class="live">
     <div class="title">
       <img src="test/live-title.png" alt="">
@@ -124,6 +135,7 @@
     </div>
     <div onclick="goLiveHouse()" class="btn">申请远程视频看房</div>
   </div>
+  <!--  价值配套-->
   <div class="peitao">
     <div class="title">
       <img src="test/peitao-title.png" alt="">
@@ -131,10 +143,172 @@
     <img class="info" src="test/peitao.jpg" alt="">
     <div onclick="goBaoJia()" class="btn">获取楼盘及报价</div>
   </div>
+  <!--  预约看房-->
+  <div class="book">
+    <form id="book">
+      <div class="title">
+        <img src="test/book.png" alt="">
+      </div>
+      <div class="inputs">
+        <div class="item user">
+          <img src="image/user.png" alt="">
+          <input name="realname" type="text" placeholder="姓名">
+        </div>
+        <div class="item phone">
+          <img src="image/phone.png" alt="">
+          <input name="phone" type="tel" placeholder="手机号码">
+        </div>
+        <div class="item date">
+          <img src="image/date.png" alt="">
+          <input id="dateTime" name="dateTime" readonly type="text" placeholder="看房时间">
+        </div>
+      </div>
+      <div class="radios">
+        <div>
+          <input checked name="traffic" id="jichang" type="radio" value="机场接送">
+          <label for="jichang">机场接送</label>
+        </div>
+        <div>
+          <input name="traffic" id="gaotie" type="radio" value="高铁接送">
+          <label for="gaotie">高铁接送</label>
+        </div>
+        <div>
+          <input name="traffic" id="zhoubian" type="radio" value="周边接送">
+          <label for="zhoubian">周边接送</label>
+        </div>
+      </div>
+      <div onclick="goBook()" class="btn">立即预约看房</div>
+    </form>
+  </div>
+  <!--  户型鉴赏-->
+  <div class="jianshang">
+    <div class="title">
+      <img src="test/js-title.png" alt="">
+    </div>
+    <div class="swiper-container" id="houseModel">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img width="100%" src="https://www.yjsh666.cn/M00/componentImg/2020/04/22/4e36c855eef5cb704796cf5c2795cc32.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img width="100%" src="https://www.yjsh666.cn/M00/componentImg/2020/04/22/4e36c855eef5cb704796cf5c2795cc32.jpg" alt="">
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div id="houseModelPagination" class="swiper-pagination"></div>
+    </div>
+  
+  </div>
+  <!--  在线看房-->
+  <div class="online-room">
+    <div class="title">
+      <img src="test/online-room.png" alt="">
+    </div>
+    <form id="onlineRoom">
+      <div class="item">
+        <img src="image/house.png" alt="">
+        <span class="label">户型</span>
+        <label>
+          <input name="layout" type="radio" value="1房1厅" checked>
+          一房一厅
+        </label>
+        <label>
+          <input name="layout" type="radio" value="2房2厅">
+          两房两厅
+        </label>
+        <label>
+          <input name="layout" type="radio" value="3房2厅">
+          三房两厅
+        </label>
+        <label>
+          <input name="layout" type="radio" value="别墅">
+          别墅
+        </label>
+      </div>
+      <div class="item">
+        <img src="image/cx.png" alt="">
+        <span class="label">朝向</span>
+        <label>
+          <input name="orientation" type="radio" value="110㎡以上" checked>
+          正南
+        </label>
+        <label>
+          <input name="orientation" type="radio" value="110㎡以上">
+          东南
+        </label>
+        <label>
+          <input name="orientation" type="radio" value="110㎡以上">
+          西南
+        </label>
+        <label>
+          <input name="orientation" type="radio" value="110㎡以上">
+          其他
+        </label>
+      </div>
+      <div class="item">
+        <img src="image/mj.png" alt="">
+        <span class="label">面积</span>
+        <label>
+          <input name="area" type="radio" value="45-47㎡" checked>
+          45-47㎡
+        </label>
+        <label>
+          <input name="area" type="radio" value="70-77㎡">
+          70-77㎡
+        </label>
+        <label>
+          <input name="area" type="radio" value="110㎡以上">
+          110㎡以上
+        </label>
+      </div>
+      
+      <div class="search">
+        <input type="tel" name="phone" placeholder="输入手机号码"/>
+        <span onclick="goOnlineRoom()">获取结果</span>
+      </div>
+    </form>
+  </div>
+  <!--  特价房源-->
+  <div class="tejia-house">
+    <div class="swiper-container" id="tejia">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img width="100%" src="https://static.yjsh666.cn/M00/componentImg/2020/07/07/9f6070fcd12699fc95efe0ea79352c8f.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img width="100%" src="https://static.yjsh666.cn/M00/componentImg/2020/07/07/9f6070fcd12699fc95efe0ea79352c8f.jpg" alt="">
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div id="tejiaPagination" class="swiper-pagination"></div>
+    </div>
+    <div class="btn" onclick="goTejia()">查看特价户型房源</div>
+  </div>
+  <!--  房源查询-->
+  <div class="transactionInquiry">
+    <div class="title">
+      <img src="test/house-query-title.png" alt="">
+    </div>
+    <div class="radios">
+      <label>
+        <input type="radio">
+        成交查询
+      </label>
+      <label>
+        <input type="radio">
+        房源查询
+      </label>
+    </div>
+    <div class="body">
+      <img width="100%" src="image/house-query.jpg" alt="">
+      <div class="btn">登录查看在售房源</div>
+    </div>
+  </div>
 </div>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.0.0/jquery.js"></script>
 <script src="js/swiper.min.js"></script>
 <script src="js/jquery.rotate.js"></script>
+<script src="js/LCalendar.js"></script>
 <script src="js/layer.js"></script>
 <script src="js/index.js"></script>
 </body>

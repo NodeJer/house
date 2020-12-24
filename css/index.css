@@ -16,6 +16,25 @@ p {
 	text-align       : center;
 	text-shadow      : 0px 1px 7px rgba(164, 80, 5, 0.85);
 }
+.search{
+	line-height : .5rem;
+	display: flex;
+}
+.search input{
+	flex: 3;
+	font-size : .25rem;
+	text-indent: .3rem;
+	color: #7c7c7c;
+	outline: none;
+	border:1px solid #ccc;
+	border-right: none;
+}
+.search span{
+	flex: 1;
+	font-size : .25rem;
+	color: #fff;
+	background-color: #f66c28;
+}
 
 .container {
 	max-width        : 750px;
@@ -32,7 +51,8 @@ p {
 	width    : 1.2rem;
 	position : fixed;
 	right    : .8rem;
-	top      : 11.8rem;
+	top      : 50%;
+	transform: translateY(-50%);
 	z-index  : 2;
 }
 
@@ -128,15 +148,8 @@ p {
 	font-size   : .35rem;
 	padding     : .18rem 0 .14rem 0;
 }
-
-@media screen and (min-width: 750px) {
-	.activity .body .item .sub {
-		transform                : scale(0.7);
-	}
-}
 .activity .body .item .sub {
 	font-size                : .25rem;
-	/*transform                : scale(0.7);*/
 	white-space              : nowrap;
 	-webkit-transform-origin : center;
 }
@@ -237,3 +250,157 @@ p {
 	margin : .5rem auto;
 }
 
+.book{
+	overflow:hidden;
+	background-color: #f66c28;
+}
+.book form{
+	width : 9.66rem;
+	font-size : .4rem;
+	margin: .9rem auto 1.12rem auto;
+	background-color: #fff;
+	border-radius: .2rem;
+	overflow: hidden;
+}
+.book .title{
+	padding: .46rem 0;
+}
+.book .title img{
+	width : 2.7rem;
+	margin: auto;
+}
+.book .inputs{
+	width : 7.86rem;
+	margin: 0 auto;
+}
+.book .inputs .item{
+	display: flex;
+	align-items: center;
+	border:1px solid #a4a4a4;
+	border-radius: .9rem;
+	margin-bottom: .5rem;
+}
+.book .inputs img{
+	margin: 0 .4rem;
+}
+.book .inputs input{
+	border:none;
+	outline: none;
+	line-height : .94rem;
+}
+.book .inputs .user img{
+	width : .42rem;
+}
+.book .inputs .phone img{
+	width : .33rem;
+}
+.book .inputs .date img{
+	width : .49rem;
+}
+.book .radios{
+	width : 7.86rem;
+	margin: auto;
+	padding-top : .5rem;
+	display: flex;
+	justify-content: space-between;
+}
+.book .radios input{
+	width : .26rem;
+	height : .26rem;
+}
+.book .btn{
+	margin: 1.4rem auto .52rem auto;
+}
+
+.jianshang{}
+.jianshang .title{
+	padding: .75rem 0;
+}
+.jianshang .title img{
+	width : 2.69rem;
+	margin: auto;
+}
+.online-room{
+	text-align: center;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.online-room .title{
+	padding: .8rem 0;
+}
+.online-room .title img{
+	width : 2.62rem;
+	margin: auto;
+}
+.online-room form{
+	display: inline-block;
+}
+.online-room .item{
+	display: flex;
+	align-items: center;
+	color: #5a5a5a;
+	font-size : .35rem;
+	margin-top : 1rem;
+}
+.online-room .item:first-child{
+	margin : 0;
+}
+.online-room .item img{
+	width : .3rem;
+}
+.online-room .item .label{
+	padding: 0 .52rem 0 .25rem;
+}
+.online-room .item label{
+	font-size : .25rem;
+	padding:0 .4rem;
+	border-right: 1px solid #5a5a5a;
+}
+.online-room .item label:last-child{
+	border: none;
+}
+
+.online-room .search{
+	width : 6.34rem;
+	margin: 1rem auto;
+}
+.tejia-house{
+	overflow: hidden;
+}
+.tejia-house .btn{
+	margin: .7rem auto 1rem auto;
+}
+
+.transactionInquiry{
+	padding: 0 .8rem;
+	margin: auto;
+	background-color: #fff;
+}
+.transactionInquiry .title{
+	padding: .12rem 0;
+	background-color: #f66c28;
+}
+.transactionInquiry .title img{
+	width : 2.66rem;
+	margin: auto;
+}
+.transactionInquiry .radios{
+	font-size : .35rem;
+	display: flex;
+	margin-top : .5rem;
+	justify-content: space-around;
+}
+.transactionInquiry .radios input{
+	width : .26rem;
+	height : .26rem;
+}
+.transactionInquiry .body{
+	position : relative;
+}
+.transactionInquiry .body .btn{
+	position : absolute;
+	left : 50%;
+	top : 50%;
+	transform: translate(-50%, -50%);
+}

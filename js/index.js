@@ -1,3 +1,9 @@
+//手机号正则
+var phoneReg = /^(0|86|17951)?(13[0-9]|15[012356789]|166|17[3678]|18[0-9]|14[57])[0-9]{8}$/;
+//姓名正则
+var nameReg  = /^[\u4E00-\u9FA5]{2,4}$/;
+//时间正则
+var dateReg  = /^[1-2][0-9][0-9][0-9]-[0-1]{0,1}[0-9]-[0-3]{0,1}[0-9]$/;
 /*首页轮播图*/
 new Swiper('#homeBanner', {
   pagination         : '#homeBannerPagination',
@@ -11,6 +17,28 @@ new Swiper('#gallery', {
   // autoplay           : 5000,
   paginationClickable: false,
   loop               : false
+});
+/*户型鉴赏轮播图*/
+new Swiper('#houseModel', {
+  pagination         : '#houseModelPagination',
+  // autoplay           : 5000,
+  paginationClickable: false,
+  loop               : false
+});
+/*特价房源轮播图*/
+new Swiper('#tejia', {
+  pagination         : '#tejiaPagination',
+  // autoplay           : 5000,
+  paginationClickable: false,
+  loop               : false
+});
+
+//预约看房日期选择
+var calendar = new LCalendar();
+calendar.init({
+  'trigger': '#dateTime',//标签id
+  'type'   : 'date',//date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择
+  // 'minDate': new Date().toLocaleDateString().replace(/\//g, '-'),//最小日期 注意：该值会覆盖标签内定义的日期范围
 });
 //奖品列表
 var prizeList = [
@@ -140,6 +168,48 @@ function goBaoJia() {
   });
 }
 
+//立即预约看房
+function goBook() {
+  var $form = $('#book');
+  
+  if (!nameReg.test($form[0]['realname'].value)) {
+    alert('请输入合法姓名');
+    return false;
+  }
+  else if (!phoneReg.test($form[0]['phone'].value)) {
+    alert('请输入格式正确的手机号码');
+    return false;
+  }
+  else if (!dateReg.test($form[0]['dateTime'].value)) {
+    alert('请输入格式正确的日期');
+    return false;
+  }
+  else {
+    //todo 立即预约看房
+    alert('立即预约看房接口' + $form.serialize());
+  }
+}
+//在线看房
+function goOnlineRoom() {
+  var $form = $('#onlineRoom');
+  
+  if (!phoneReg.test($form[0]['phone'].value)) {
+    alert('请输入格式正确的手机号码');
+    return false;
+  }
+  else {
+    //todo 在线看房
+    alert('在线看房接口' + $form.serialize());
+  }
+}
+//查看特价户型房源
+function goTejia() {
+  openLayer('查看特价户型房源', '立即查看', function (phone) {
+    //todo 调用查看特价户型房源接口
+    alert('调用查看特价户型房源接口');
+  });
+}
+
 /**
  * 手机号录入弹出层
  * @param title 弹出框标题
@@ -153,7 +223,7 @@ function openLayer(title, btnText, callback) {
     btn    : btnText,
     yes    : function (index) {
       var phone = $('input[name=phone]').val();
-      if (!/^(0|86|17951)?(13[0-9]|15[012356789]|166|17[3678]|18[0-9]|14[57])[0-9]{8}$/.test(phone)) {
+      if (!phoneReg.test(phone)) {
         alert('手机号码格式不正确！');
       }
       //正确填写手机号码
