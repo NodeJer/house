@@ -217,6 +217,11 @@ function goTejia() {
   });
 }
 
+//登录查看在售房源
+function goLogin() {
+  alert('登录查看在售房源');
+}
+
 //获取该房号计价单
 function goOnlineCompute() {
   var $form = $('#onlineCompute');
@@ -329,16 +334,16 @@ function goLocation() {
  */
 function openLayer(title, btnText, callback) {
   layer.open({
-    title   : title,
-    content : '<form><input autofocus name="layerPhone" style="line-height: 1rem; width: 70%" type="tel" placeholder="请输入手机号码" /></form>',
-    btn     : [btnText, '关闭'],
-    success : function () {
+    title  : title,
+    content: '<form><input autofocus name="layerPhone" style="line-height: 1rem; width: 70%" type="tel" placeholder="请输入手机号码" /></form>',
+    btn    : [btnText, '关闭'],
+    success: function () {
       $('input[name=layerPhone]')[0].focus();
     },
-    cancel: function (index){
+    cancel : function (index) {
       layer.close(index);
     },
-    yes     : function (index) {
+    yes    : function (index) {
       var phone = $('input[name=layerPhone]').val();
       if (!phoneReg.test(phone)) {
         alert('手机号码格式不正确！');
@@ -363,7 +368,7 @@ function openLayerComment(title, btnText, callback) {
     title  : title,
     content: '<form><textarea id="layerComment" name="layerComment" style="width: 70%; height: 2rem; resize: none" placeholder="请输入评论"></textarea></form>',
     btn    : [btnText, '关闭'],
-    cancel: function (index){
+    cancel : function (index) {
       layer.close(index);
     },
     yes    : function (index) {
