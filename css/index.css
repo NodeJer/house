@@ -24,7 +24,8 @@ p {
 
 .search input {
 	flex          : 3;
-	font-size     : .3rem;
+	height        : .8rem;
+	font-size     : .34rem;
 	text-indent   : .3rem;
 	color         : #7c7c7c;
 	outline       : none;
@@ -45,7 +46,7 @@ p {
 }
 
 .container {
-	padding-top : 1.5rem;
+	padding-top      : 1.5rem;
 	max-width        : 750px;
 	margin           : auto;
 	background-color : #fbfbfb;
@@ -71,17 +72,17 @@ p {
 }
 
 .logo {
-	position : fixed;
-	top : 0;
-	left : 0;
-	width : 100%;
-	display         : flex;
-	align-items     : center;
-	justify-content : space-between;
-	height : 1.5rem;
-	background-color: #fff;
-	box-shadow: 2px 0 5px #bcbcbc;
-	z-index: 10;
+	position         : fixed;
+	top              : 0;
+	left             : 0;
+	width            : 100%;
+	display          : flex;
+	align-items      : center;
+	justify-content  : space-between;
+	height           : 1.5rem;
+	background-color : #fff;
+	box-shadow       : 2px 0 5px #bcbcbc;
+	z-index          : 10;
 }
 
 .logo img {
@@ -421,7 +422,8 @@ p {
 	padding      : 0 .4rem;
 	border-right : 1px solid #5a5a5a;
 }
-.online-room .item label:last-child{
+
+.online-room .item label:last-child {
 	padding-right : 0;
 }
 
