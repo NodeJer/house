@@ -404,7 +404,7 @@ function scroll(node, lineHeight) {
     }
     var scrollSpace = node.scrollHeight / 2;
     var st          = node.scrollTop;
-    if (st + 5 >= scrollSpace) {
+    if (st + 6 >= scrollSpace) {
       node.appendChild(node.children[0]);
     }
     else {
