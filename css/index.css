@@ -792,7 +792,7 @@ p {
 
 .news .btns {
 	display         : flex;
-	justify-content : space-evenly;
+	justify-content : space-around;
 	padding         : .2rem 0 .8rem 0;
 }
 
@@ -861,7 +861,7 @@ p {
 
 .forum .btns {
 	display         : flex;
-	justify-content : space-evenly;
+	justify-content : space-around;
 	margin-top      : .55rem;
 }
 
