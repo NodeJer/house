@@ -309,7 +309,7 @@
     <div class="title">
       <img src="test/online-compute.png" alt="">
     </div>
-    <form>
+    <form id="onlineCompute">
       <div class="input-texts">
         <div>
           <input name="block" type="number" placeholder="输入栋号">
@@ -322,23 +322,59 @@
       </div>
       <div class="radios">
         <label>
-          <input name="paymentMethod" type="radio" checked>
+          <input name="paymentMethod" type="radio" value="按揭" checked>
           <span>按揭</span>
         </label>
         <label>
-          <input name="paymentMethod" type="radio">
+          <input name="paymentMethod" value="一次性" type="radio">
           <span>一次性</span>
         </label>
         <label>
-          <input name="paymentMethod" type="radio">
+          <input name="paymentMethod" value="分期" type="radio">
           <span>分期</span>
         </label>
       </div>
       <div class="search">
         <input type="tel" name="phone" placeholder="输入手机号码"/>
-        <span onclick="">获取该房号计价单</span>
+        <span onclick="goOnlineCompute()">获取该房号计价单</span>
       </div>
     </form>
+  </div>
+<!--  置业顾问-->
+  <div class="adviser">
+    <div class="title">
+      <img src="test/gw.png" alt="">
+    </div>
+    <img width="100%" src="https://static.yjsh666.cn/M00/componentImg/2020/06/21/b9b317b2696e577e90ce1e8190e0154e.jpg" alt="">
+    <div class="items">
+      <div class="item">
+        <img src="https://www.yjsh666.cn/M00/avatar/2020/07/31/3d0329a9fa493ee0f27703274f84a0a6.jpg" alt="">
+        <div class="info">
+          <p>卢本伟</p>
+          <p>高级置业顾问</p>
+          <p>咨询人数：123456人  满意度：98%</p>
+        </div>
+        <div class="btn">找TA咨询</div>
+      </div>
+      <div class="item">
+        <img src="https://www.yjsh666.cn/M00/avatar/2020/07/31/3d0329a9fa493ee0f27703274f84a0a6.jpg" alt="">
+        <div class="info">
+          <p>卢本伟</p>
+          <p>高级置业顾问</p>
+          <p>咨询人数：123456人  满意度：98%</p>
+        </div>
+        <div class="btn">找TA咨询</div>
+      </div>
+      <div class="item">
+        <img src="https://www.yjsh666.cn/M00/avatar/2020/07/31/3d0329a9fa493ee0f27703274f84a0a6.jpg" alt="">
+        <div class="info">
+          <p>卢本伟</p>
+          <p>高级置业顾问</p>
+          <p>咨询人数：123456人  满意度：98%</p>
+        </div>
+        <div class="btn">找TA咨询</div>
+      </div>
+    </div>
   </div>
 </div>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.0.0/jquery.js"></script>

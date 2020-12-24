@@ -491,3 +491,50 @@ p {
 	width : 8.88rem;
 	margin: 1rem auto 0 auto;
 }
+.adviser{
+	background-color: #fff;
+}
+.adviser .title{
+	padding: .6rem 0;
+}
+.adviser .title img{
+	width : 2.64rem;
+	margin: auto;
+}
+.adviser .items{
+	overflow: hidden;
+}
+.adviser .item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin : .98rem 0;
+}
+.adviser .item img{
+	width : 2.24rem;
+	height : 2.24rem;
+}
+.adviser .item .info{
+	margin-left : .46rem;
+}
+.adviser .item .info p:nth-child(1){
+	font-size : .6rem;
+	font-weight : 600;
+}
+.adviser .item .info p:nth-child(2){
+	font-size : .35rem;
+	color: #5a5a5a;
+	margin-top : .3rem;
+}
+.adviser .item .info p:nth-child(3){
+	font-size : .25rem;
+	color: #7c7c7c;
+	margin-top : .2rem;
+}
+.adviser .item .btn{
+	width : 2rem;
+	height : .46rem;
+	line-height : .46rem;
+	font-size : .25rem;
+	margin-left : .7rem;
+}

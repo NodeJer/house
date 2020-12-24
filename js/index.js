@@ -209,6 +209,27 @@ function goTejia() {
     alert('调用查看特价户型房源接口');
   });
 }
+//获取该房号计价单
+function goOnlineCompute() {
+  var $form = $('#onlineCompute');
+  
+  if (!phoneReg.test($form[0]['phone'].value)) {
+    alert('请输入格式正确的手机号码');
+    return false;
+  }
+  else if($form[0]['block'].value == ''){
+    alert('请输入栋号');
+    return false;
+  }
+  else if($form[0]['room'].value == ''){
+    alert('请输入房号');
+    return false;
+  }
+  else {
+    //todo 获取该房号计价单接口
+    alert('获取该房号计价单' + $form.serialize());
+  }
+}
 
 /**
  * 手机号录入弹出层
