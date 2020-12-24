@@ -94,6 +94,11 @@ $.get('https://hd.zdb.im/v2/view/randUserList', function (response) {
   scroll(lotteryHistoryNode[0]);
 });
 
+//业主论坛滚动
+scroll($('#forumBody')[0], $('#forumBody .item')[0].offsetHeight+1);
+//业主微信群滚动
+scroll($('#wechatBody')[0]);
+
 //抽奖
 function goLottery() {
   openLayer('留下联系方式，领取奖品', '立即抽奖', function (phone) {
@@ -238,7 +243,6 @@ function goGuwen() {
     alert('调用置业顾问咨询接口');
   });
 }
-
 //百问百答
 function goAsk() {
   var $form = $('#ask');
@@ -257,6 +261,48 @@ function goAsk() {
   }
 }
 
+//查看更多动态
+function goNews() {
+  openLayer('查看更多动态', '立即查看', function (phone) {
+    //todo 调用查看更多动态接口
+    alert('调用查看更多动态接口');
+  });
+}
+//一键订阅
+function goDescribe() {
+  openLayer('订阅项目动态', '立即订阅', function (phone) {
+    //todo 调用一键订阅接口
+    alert('调用一键订阅接口');
+  });
+}
+//业主论坛查看全部
+function goFornumAll() {
+  openLayer('查看全部', '立即查看', function (phone) {
+    //todo 调用业主论坛查看全部接口
+    alert('调用业主论坛查看全部接口');
+  });
+}
+//业主论坛评论
+function goFornumComment() {
+  openLayerComment('我要评论', '立即评论', function (comment) {
+    //todo 调用业主论坛评论接口
+    alert('调用业主论坛评论接口=>'+comment);
+  });
+}
+//业主微信群
+function goJoin() {
+  openLayer('加入业主微信群', '立即加入', function (phone) {
+    //todo 调用加入业主微信群接口
+    alert('调用加入业主微信群接口');
+  });
+}
+//楼盘证书
+function goZhenshu() {
+  openLayer('查看项目五证高清图片', '立即查看', function (phone) {
+    //todo 调用查看楼盘证书接口
+    alert('调用查看楼盘证书接口');
+  });
+}
 /**
  * 手机号录入弹出层
  * @param title 弹出框标题
@@ -266,16 +312,40 @@ function goAsk() {
 function openLayer(title, btnText, callback) {
   layer.open({
     title  : title,
-    content: '<form><input name="phone" style="line-height: 1rem; width: 70%" type="tel" placeholder="请输入手机号码" /></form>',
+    content: '<form><input name="layerPhone" style="line-height: 1rem; width: 70%" type="tel" placeholder="请输入手机号码" /></form>',
     btn    : btnText,
     yes    : function (index) {
-      var phone = $('input[name=phone]').val();
+      var phone = $('input[name=layerPhone]').val();
       if (!phoneReg.test(phone)) {
         alert('手机号码格式不正确！');
       }
       //正确填写手机号码
       else {
         callback(phone);
+        layer.close(index);
+      }
+    }
+  });
+}
+/**
+ * 评论弹出层
+ * @param title 弹出框标题
+ * @param btnText 弹出框按钮文本
+ * @param callback 弹出框回掉方法
+ */
+function openLayerComment(title, btnText, callback) {
+  layer.open({
+    title  : title,
+    content: '<form><textarea id="layerComment" name="layerComment" style="width: 70%; height: 2rem; resize: none" placeholder="请输入评论"></textarea></form>',
+    btn    : btnText,
+    yes    : function (index) {
+      var layerComment = $('#layerComment').val();
+      if (layerComment == '') {
+        alert('请填写评论！');
+      }
+      //正确填写手机号码
+      else {
+        callback(layerComment);
         layer.close(index);
       }
     }
@@ -288,7 +358,7 @@ function scroll(node, lineHeight) {
     node.appendChild(node.children[0].cloneNode(true));
   }
   
-  var lineHeight = parseInt(window.getComputedStyle(node, null).lineHeight);
+  var lineHeight = lineHeight||parseInt(window.getComputedStyle(node, null).lineHeight);
   var tid        = null;
   var stop       = true;
   
@@ -309,7 +379,7 @@ function scroll(node, lineHeight) {
         setTimeout(function () {
           node.scrollTop = st + 1;
           step();
-        }, 2000);
+        }, 3000);
         
       }
       else {

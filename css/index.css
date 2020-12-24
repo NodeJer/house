@@ -7,14 +7,14 @@ p {
 	background-image : -moz-linear-gradient(-84deg, rgb(255, 171, 50) 0%, rgb(251, 140, 45) 56%, rgb(246, 108, 40) 99%);
 	background-image : -webkit-linear-gradient(-84deg, rgb(255, 171, 50) 0%, rgb(251, 140, 45) 56%, rgb(246, 108, 40) 99%);
 	background-image : -ms-linear-gradient(-84deg, rgb(255, 171, 50) 0%, rgb(251, 140, 45) 56%, rgb(246, 108, 40) 99%);
-	box-shadow       : 0px 8px 10px 0px rgba(212, 56, 36, 0.28);
+	box-shadow       : 0 8px 10px 0 rgba(212, 56, 36, 0.28);
 	height           : .84rem;
 	line-height      : .84rem;
 	width            : 3.88rem;
 	font-size        : .42rem;
 	color            : #fff;
 	text-align       : center;
-	text-shadow      : 0px 1px 7px rgba(164, 80, 5, 0.85);
+	text-shadow      : 0 1px 7px rgba(164, 80, 5, 0.85);
 }
 .search{
 	height : .8rem;
@@ -641,4 +641,128 @@ p {
 .news .title img{
 	width : 2.64rem;
 	margin: auto;
+}
+.news .body{
+	margin : 0 .8rem;
+	border-radius: .2rem;
+	background-color: #fff;
+}
+.news .body .item{
+	padding: .48rem .4rem;
+	border-top:1px dashed #ccc;
+}
+.news .body .item:first-child{
+	border:none;
+}
+.news .body .item .t1{
+	font-size : .36rem;
+	color: #f66c28;
+}
+.news .body .item .t2{
+	font-size : .27rem;
+	color: #7c7c7c;
+	margin-top : .4rem;
+}
+.news .body .item .date{
+	font-size : .27rem;
+	color: #7c7c7c;
+	margin-top : .2rem;
+	text-align: right;
+}
+.news .btns{
+	display: flex;
+	justify-content: space-evenly;
+	padding: .2rem 0 .8rem 0;
+}
+.forum{}
+.forum .title{
+	padding: .6rem 0;
+}
+.forum .title img{
+	width : 2.7rem;
+	margin: auto;
+}
+.forum .body{
+	margin: 0 .8rem;
+	border-radius: .2rem;
+	padding-bottom : .6rem;
+	background-color: #fff;
+}
+.forum .body >div:first-child{
+	
+	overflow : hidden;
+	height : 9.5rem;
+}
+.forum .body .items{}
+.forum .body .item{
+	display: flex;
+	align-items: center;
+	padding: .4rem .2rem;
+	border-bottom: 1px dashed #ccc;
+	line-height: .6rem;
+}
+.forum .body .items:nth-child(2) .item:last-child{
+	border : none;
+}
+.forum .body .item img{
+	width : 1rem;
+	height : 1rem;
+	border-radius: 1rem;
+}
+.forum .body .item .info{
+	margin-left : .2rem;
+}
+.forum .body .item .phone{
+	font-size : .4rem;
+	font-weight : 600;
+}
+.forum .body .item .date{
+	font-size : .3rem;
+	color: #d3d3d3;
+}
+.forum .body .item .content{
+	font-size : .3rem;
+	color: #626365;
+}
+.forum .btns{
+	display: flex;
+	justify-content: space-evenly;
+	margin-top : .55rem;
+}
+.wechat .title{
+	padding: .66rem 0;
+}
+.wechat .title img{
+	width : 3.38rem;
+	margin :auto;
+}
+.wechat .body{
+	margin: 0 .8rem;
+	padding: .4rem .4rem .8rem .4rem;
+	border-radius: .2rem;
+	text-align: center;
+	background-color: #fff;
+}
+.wechat .body>div:first-child{
+	line-height : .8rem;
+	font-size : .4rem;
+	letter-spacing: 1px;
+	height: 4rem;
+	overflow: hidden;
+}
+.wechat .btn{
+	margin : .56rem auto 0 auto;
+}
+.zhenshu{
+	padding-bottom : .7rem;
+}
+.zhenshu .title{
+	padding: .6rem 0;
+}
+.zhenshu .title img{
+	width : 2.8rem;
+	margin: auto;
+}
+.zhenshu .btn{
+	margin : .55rem auto 0 auto;
 }
