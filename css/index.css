@@ -160,12 +160,13 @@ p {
 }
 
 .activity .body .item {
+	width : 50%;
 	display        : flex;
 	flex-direction : column;
 	align-items    : center;
-	width          : 4.52rem;
+	/*width          : 4.52rem;*/
 	/*text-align: center;*/
-	margin-left    : .3rem;
+	/*margin-left    : .3rem;*/
 	margin-top     : .56rem;
 	overflow       : hidden;
 }
