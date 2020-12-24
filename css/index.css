@@ -66,8 +66,8 @@ p {
 	width     : 1.2rem;
 	position  : fixed;
 	right     : .8rem;
-	top       : 50%;
-	transform : translateY(-50%);
+	top       : 70%;
+	/*transform : translateY(-50%);*/
 	z-index   : 2;
 }
 
