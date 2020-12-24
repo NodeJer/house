@@ -291,11 +291,11 @@
     </div>
     <div class="radios">
       <label>
-        <input type="radio" checked>
+        <input name="q" type="radio" checked>
         <span>成交查询</span>
       </label>
       <label>
-        <input type="radio">
+        <input name="q" type="radio">
         <span>房源查询</span>
       </label>
     </div>
@@ -303,6 +303,42 @@
       <img width="100%" src="image/house-query.jpg" alt="">
       <div class="btn">登录查看在售房源</div>
     </div>
+  </div>
+  <!--  在线算价-->
+  <div class="online-compute">
+    <div class="title">
+      <img src="test/online-compute.png" alt="">
+    </div>
+    <form>
+      <div class="input-texts">
+        <div>
+          <input name="block" type="number" placeholder="输入栋号">
+          <span>栋</span>
+        </div>
+        <div>
+          <input name="room" type="number" placeholder="输入房号">
+          <span>房号</span>
+        </div>
+      </div>
+      <div class="radios">
+        <label>
+          <input name="paymentMethod" type="radio" checked>
+          <span>按揭</span>
+        </label>
+        <label>
+          <input name="paymentMethod" type="radio">
+          <span>一次性</span>
+        </label>
+        <label>
+          <input name="paymentMethod" type="radio">
+          <span>分期</span>
+        </label>
+      </div>
+      <div class="search">
+        <input type="tel" name="phone" placeholder="输入手机号码"/>
+        <span onclick="">获取该房号计价单</span>
+      </div>
+    </form>
   </div>
 </div>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.0.0/jquery.js"></script>
