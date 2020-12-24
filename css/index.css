@@ -165,7 +165,7 @@ p {
 	align-items    : center;
 	width          : 4.52rem;
 	/*text-align: center;*/
-	margin-left    : .2rem;
+	margin-left    : .3rem;
 	margin-top     : .56rem;
 	overflow       : hidden;
 }
@@ -181,7 +181,7 @@ p {
 }
 
 .activity .body .item .sub {
-	font-size                : .25rem;
+	font-size                : .3rem;
 	white-space              : nowrap;
 	-webkit-transform-origin : center;
 }
