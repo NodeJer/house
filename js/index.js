@@ -231,6 +231,32 @@ function goOnlineCompute() {
   }
 }
 
+//置业顾问咨询
+function goGuwen() {
+  openLayer('预约顾问', '立即预约', function (phone) {
+    //todo 调用置业顾问咨询接口
+    alert('调用置业顾问咨询接口');
+  });
+}
+
+//百问百答
+function goAsk() {
+  var $form = $('#ask');
+  
+  if (!phoneReg.test($form[0]['phone'].value)) {
+    alert('请输入格式正确的手机号码');
+    return false;
+  }
+  else if($form[0]['consult'].value == ''){
+    alert('请输入问题');
+    return false;
+  }
+  else {
+    //todo 百问百答接口
+    alert('百问百答' + $form.serialize());
+  }
+}
+
 /**
  * 手机号录入弹出层
  * @param title 弹出框标题
