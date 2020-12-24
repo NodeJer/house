@@ -17,7 +17,6 @@ p {
 	text-shadow      : 0px 1px 7px rgba(164, 80, 5, 0.85);
 }
 .search{
-	line-height : .5rem;
 	display: flex;
 }
 .search input{
@@ -28,10 +27,13 @@ p {
 	outline: none;
 	border:1px solid #ccc;
 	border-right: none;
+	background : none;
 }
 .search span{
 	flex: 1;
 	font-size : .25rem;
+	line-height : .5rem;
+	height : .5rem;
 	color: #fff;
 	background-color: #f66c28;
 }
@@ -303,6 +305,7 @@ p {
 	padding-top : .5rem;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 .book .radios input{
 	width : .26rem;
@@ -353,9 +356,16 @@ p {
 	padding: 0 .52rem 0 .25rem;
 }
 .online-room .item label{
+	display: flex;
+	align-items: center;
 	font-size : .25rem;
 	padding:0 .4rem;
 	border-right: 1px solid #5a5a5a;
+}
+.online-room .item input{
+	width : .26rem;
+	height : .26rem;
+	margin-right: .1rem;
 }
 .online-room .item label:last-child{
 	border: none;
@@ -391,6 +401,7 @@ p {
 	display: flex;
 	margin-top : .5rem;
 	justify-content: space-around;
+	align-items: center;
 }
 .transactionInquiry .radios input{
 	width : .26rem;
@@ -398,6 +409,7 @@ p {
 }
 .transactionInquiry .body{
 	position : relative;
+	margin-top : .5rem;
 }
 .transactionInquiry .body .btn{
 	position : absolute;
