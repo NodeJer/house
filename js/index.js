@@ -94,10 +94,12 @@ $.get('https://hd.zdb.im/v2/view/randUserList', function (response) {
   scroll(lotteryHistoryNode[0]);
 });
 
-//业主论坛滚动
-scroll($('#forumBody')[0], $('#forumBody .item')[0].offsetHeight + 1);
-//业主微信群滚动
-scroll($('#wechatBody')[0]);
+$(function (){
+  //业主论坛滚动
+  scroll($('#forumBody')[0], $('#forumBody .item')[0].offsetHeight + 1);
+  //业主微信群滚动
+  scroll($('#wechatBody')[0]);
+});
 
 //抽奖
 function goLottery() {
