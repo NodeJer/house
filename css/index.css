@@ -39,7 +39,7 @@ p {
 	display          : flex;
 	align-items      : center;
 	justify-content  : center;
-	flex             : 1.5;
+	flex             : 1.8;
 	font-size        : .32rem;
 	color            : #fff;
 	background-color : #f66c28;
@@ -525,7 +525,7 @@ p {
 }
 
 .online-compute .input-texts input {
-	font-size     : .25rem;
+	font-size     : .32rem;
 	text-indent   : .2rem;
 	color         : #7c7c7c;
 	height        : .5rem;
